@@ -135,7 +135,7 @@ const TodoList = ({
   // Memoized empty state
   const EmptyState = useMemo(() => (
     <div style={{ textAlign: 'center', padding: '40px 0', color: '#999' }}>
-      <Text>No todos yet. Add your first todo above! 📝</Text>
+      <Text>No to-dos yet. Add your first to-do above! 📝</Text>
     </div>
   ), []);
 
@@ -183,7 +183,7 @@ const TodoList = ({
           />,
           <Popconfirm
             key="delete"
-            title="Delete Todo"
+            title="Delete To-do"
             description={`Are you sure you want to delete "${todo.task}"?`}
             onConfirm={(e) => {
               e?.stopPropagation();
@@ -296,7 +296,7 @@ const TodoList = ({
   return (
     <div>
       <Card 
-        title={`Todo List (${todoStats.total} total, ${todoStats.pending} pending)`}
+        title={`To-do List (${todoStats.total} total, ${todoStats.pending} pending)`}
         loading={loading}
         style={{ marginBottom: 16 }}
         extra={

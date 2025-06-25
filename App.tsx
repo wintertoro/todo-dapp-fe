@@ -4,7 +4,6 @@ import { useWallet } from "@aptos-labs/wallet-adapter-react";
 import TodoList from './components/TodoList'
 import AddTodo from './components/AddTodo'
 import WalletHelper from './components/WalletHelper'
-import WalletConnection from './components/WalletConnection'
 import { AptosService, TodoItem } from './services/aptosService'
 import './App.css'
 
@@ -108,12 +107,12 @@ function App() {
       await loadTodos(state.aptosService);
       notification.success({
         message: 'Success',
-        description: 'Todo added successfully!',
+        description: 'To-do added successfully!',
         duration: NOTIFICATION_DURATION,
       });
     } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : 'Failed to add todo';
-      console.error('Error adding todo:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Failed to add to-do';
+      console.error('Error adding to-do:', error);
       notification.error({
         message: 'Error',
         description: errorMessage,
@@ -134,12 +133,12 @@ function App() {
       await loadTodos(state.aptosService);
       notification.success({
         message: 'Success',
-        description: 'Todo updated successfully!',
+        description: 'To-do updated successfully!',
         duration: NOTIFICATION_DURATION,
       });
     } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : 'Failed to update todo';
-      console.error('Error toggling todo:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Failed to update to-do';
+      console.error('Error toggling to-do:', error);
       notification.error({
         message: 'Error',
         description: errorMessage,
@@ -160,12 +159,12 @@ function App() {
       await loadTodos(state.aptosService);
       notification.success({
         message: 'Success',
-        description: 'Todo updated successfully!',
+        description: 'To-do updated successfully!',
         duration: NOTIFICATION_DURATION,
       });
     } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : 'Failed to update todo';
-      console.error('Error updating todo:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Failed to update to-do';
+      console.error('Error updating to-do:', error);
       notification.error({
         message: 'Error',
         description: errorMessage,
@@ -186,12 +185,12 @@ function App() {
       await loadTodos(state.aptosService);
       notification.success({
         message: 'Success',
-        description: 'Todo deleted successfully!',
+        description: 'To-do deleted successfully!',
         duration: NOTIFICATION_DURATION,
       });
     } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : 'Failed to delete todo';
-      console.error('Error deleting todo:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Failed to delete to-do';
+      console.error('Error deleting to-do:', error);
       notification.error({
         message: 'Error',
         description: errorMessage,
@@ -206,15 +205,15 @@ function App() {
   const WelcomeCard = useMemo(() => (
     <Card className="welcome-card">
       <div className="welcome-content">
-        <Title level={3}>Welcome to Aptos Todo List! 🚀</Title>
+        <Title level={3}>Welcome to Aptos To-do List! 🚀</Title>
         <Text>
-          Connect your Aptos wallet to start managing your todos on the blockchain.
-          Your todos will be stored securely and immutably on the Aptos network.
+          Connect your Aptos wallet to start managing your to-dos on the blockchain.
+          Your to-dos will be stored securely and immutably on the Aptos network.
         </Text>
         <Space direction="vertical" size="middle" style={{ marginTop: 20 }}>
           <Text strong>Features:</Text>
           <ul>
-            <li>✅ Create, update, and delete todos</li>
+            <li>✅ Create, update, and delete to-dos</li>
             <li>🔒 Secure blockchain storage</li>
             <li>💰 Low transaction fees</li>
             <li>🌐 Decentralized and censorship-resistant</li>
@@ -224,53 +223,17 @@ function App() {
     </Card>
   ), []);
 
-  const WalletSection = useMemo(() => (
-    <div style={{ 
-      marginBottom: 12, 
-      display: 'flex', 
-      justifyContent: 'space-between', 
-      alignItems: 'center',
-      gap: '12px'
-    }}>
-      {connected && account ? (
-        <Card 
-          size="small" 
-          style={{ 
-            flex: 1,
-            minHeight: 'auto'
-          }}
-          bodyStyle={{ 
-            padding: '8px 12px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px'
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Title level={4} style={{ margin: 0, lineHeight: 1.2 }}>Connected Account:</Title>
-            <Text code style={{ margin: 0 }}>{account.address}</Text>
-          </div>
-        </Card>
-      ) : (
-        <div style={{ flex: 1 }} />
-      )}
-      <WalletConnection />
-    </div>
-  ), [connected, account]);
-
   return (
     <div className="app-content" style={{ padding: '24px' }}>
       <div className="content-container" style={{ maxWidth: 1200, margin: '0 auto' }}>
-        {WalletSection}
-        
-        <WalletHelper />
-        
+        <Space direction="horizontal" size="large" style={{ width: '100%', marginBottom: 16, justifyContent: 'space-between', alignItems: 'center', display: 'flex' }}>
+          <WalletHelper />
+        </Space>
         {!connected ? (
           WelcomeCard
         ) : (
           <Space direction="vertical" size="large" style={{ width: '100%' }}>
             <AddTodo onAddTodo={handleAddTodo} loading={state.loading} />
-            
             <TodoList
               todos={state.todos}
               loading={state.loading}

@@ -1,6 +1,6 @@
-# 📝 Aptos Todo dApp
+# 📝 Aptos To-do dApp
 
-A decentralized todo list application built on the Aptos blockchain, featuring a React frontend and Move smart contract. Create, manage, and track your todos on-chain with full transparency and decentralization.
+A decentralized to-do list application built on the Aptos blockchain, featuring a React frontend and Move smart contract. Create, manage, and track your to-dos on-chain with full transparency and decentralization.
 
 ## 🚀 Live Demo
 
@@ -8,10 +8,10 @@ A decentralized todo list application built on the Aptos blockchain, featuring a
 
 ## ✨ Features
 
-- 🔗 **Blockchain Integration**: Fully decentralized todo storage on Aptos testnet
+- 🔗 **Blockchain Integration**: Fully decentralized to-do storage on Aptos testnet
 - 👛 **Wallet Authentication**: Seamless integration with Petra wallet
-- ✅ **CRUD Operations**: Create, read, update, and delete todos
-- ⏰ **Timestamp Tracking**: Automatic blockchain timestamp for todo creation
+- ✅ **CRUD Operations**: Create, read, update, and delete to-dos
+- ⏰ **Timestamp Tracking**: Automatic blockchain timestamp for to-do creation
 - 📱 **Responsive Design**: Mobile-friendly interface with modern UI
 - 📚 **Documentation**: Built-in documentation with split-view capability
 - 🔒 **Secure**: All data stored on-chain with cryptographic security
