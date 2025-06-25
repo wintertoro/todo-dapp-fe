@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "devCommand": "npm run dev",
+  "env": {
+    "VITE_APTOS_NETWORK": "testnet",
+    "VITE_CONTRACT_ADDRESS": "0x5bd3338c9f09619c16a5207af405b84e98d041c8194ea90c2243be7dba513423"
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "cache-control", "value": "max-age=31536000, immutable" }
+      ]
+    }
+  ]
+} 

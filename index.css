@@ -1,0 +1,266 @@
+/* Black and white theme customization */
+:root {
+  --ant-primary-color: #000000;
+  --ant-success-color: #000000;
+  --ant-warning-color: #666666;
+  --ant-error-color: #000000;
+  --ant-info-color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Courier New', 'Courier', 'Lucida Console', 'Monaco', 'Consolas', 'Liberation Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
+  min-height: 100vh;
+  color: #333333;
+  letter-spacing: 0.5px;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+code {
+  font-family: 'Courier New', 'Courier', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  letter-spacing: 0.5px;
+}
+
+/* Global link styles */
+a {
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #666666;
+  text-decoration: underline;
+}
+
+/* Selection styles */
+::selection {
+  background: #e0e0e0;
+  color: #000000;
+}
+
+::-moz-selection {
+  background: #e0e0e0;
+  color: #000000;
+}
+
+/* Focus styles */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mb-0 { margin-bottom: 0 !important; }
+.mb-1 { margin-bottom: 8px !important; }
+.mb-2 { margin-bottom: 16px !important; }
+.mb-3 { margin-bottom: 24px !important; }
+.mb-4 { margin-bottom: 32px !important; }
+
+.mt-0 { margin-top: 0 !important; }
+.mt-1 { margin-top: 8px !important; }
+.mt-2 { margin-top: 16px !important; }
+.mt-3 { margin-top: 24px !important; }
+.mt-4 { margin-top: 32px !important; }
+
+.p-0 { padding: 0 !important; }
+.p-1 { padding: 8px !important; }
+.p-2 { padding: 16px !important; }
+.p-3 { padding: 24px !important; }
+.p-4 { padding: 32px !important; }
+
+/* Responsive typography */
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Loading spinner customization */
+.ant-spin-dot-item {
+  background-color: #000000;
+}
+
+/* Notification customization */
+.ant-notification {
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal customization */
+.ant-modal {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ant-modal-header {
+  background: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.ant-modal-content {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Prevent transition on initial load */
+.preload * {
+  transition: none !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+
+/* Input Styling */
+.ant-input {
+  background: #ffffff !important;
+  border: 1px solid #d9d9d9 !important;
+  color: #333333 !important;
+  border-radius: 8px !important;
+  font-family: 'Courier New', 'Courier', 'Monaco', 'Consolas', monospace !important;
+  letter-spacing: 0.5px !important;
+}
+
+.ant-input:focus,
+.ant-input-focused {
+  border-color: #000000 !important;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+.ant-input::placeholder {
+  color: #999999 !important;
+}
+
+/* Checkbox styling */
+.ant-checkbox-wrapper {
+  color: #333333 !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.ant-checkbox-inner {
+  border-color: #d9d9d9 !important;
+}
+
+/* Typography */
+.ant-typography {
+  color: #333333 !important;
+  font-family: 'Courier New', 'Courier', 'Monaco', 'Consolas', monospace !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Typewriter effect for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Courier New', 'Courier', 'Monaco', 'Consolas', monospace !important;
+  font-weight: bold !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase;
+}
+
+/* Button typewriter styling */
+.ant-btn {
+  font-family: 'Courier New', 'Courier', 'Monaco', 'Consolas', monospace !important;
+  font-weight: bold !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase;
+}
+
+/* Alert styling */
+.ant-alert {
+  background: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+  color: #333333 !important;
+  font-family: 'Courier New', 'Courier', 'Monaco', 'Consolas', monospace !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Table and list styling */
+.ant-table, .ant-list {
+  font-family: 'Courier New', 'Courier', 'Monaco', 'Consolas', monospace !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Card content styling */
+.ant-card-body {
+  font-family: 'Courier New', 'Courier', 'Monaco', 'Consolas', monospace !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Modal styling */
+.ant-modal-title,
+.ant-modal-body {
+  font-family: 'Courier New', 'Courier', 'Monaco', 'Consolas', monospace !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Header title styling */
+.header-title {
+  color: #ffffff !important;
+}
+
+.header-title .ant-typography {
+  color: #ffffff !important;
+}
+
+/* Responsive navigation styles */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  .mobile-nav {
+    display: block !important;
+  }
+}

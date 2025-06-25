@@ -1,0 +1,370 @@
+.app-layout {
+  min-height: 100vh;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-header {
+  background: #000000;
+  border-bottom: 2px solid #333333;
+  padding: 0 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.header-left h2 {
+  color: #ffffff;
+  margin: 0 !important;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: 'Courier New', 'Courier', 'Monaco', 'Consolas', monospace;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.header-left .ant-typography {
+  color: #cccccc !important;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.app-content {
+  padding: 24px;
+  background: transparent;
+}
+
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.welcome-card {
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  border: 2px solid #e0e0e0;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-content {
+  padding: 40px 20px;
+}
+
+.welcome-content h3 {
+  color: #000000;
+  margin-bottom: 16px;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Courier New', 'Courier', 'Monaco', 'Consolas', monospace;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.welcome-content {
+  color: #333333;
+  font-family: 'Courier New', 'Courier', 'Monaco', 'Consolas', monospace;
+  letter-spacing: 0.5px;
+}
+
+.welcome-content ul {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+}
+
+.welcome-content li {
+  padding: 8px 0;
+  font-size: 16px;
+  color: #555555;
+}
+
+.account-info {
+  text-align: center;
+  padding: 16px;
+}
+
+.account-info h4 {
+  margin-bottom: 8px;
+  color: #000000;
+  font-family: 'Courier New', 'Courier', 'Monaco', 'Consolas', monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.account-info {
+  font-family: 'Courier New', 'Courier', 'Monaco', 'Consolas', monospace;
+  letter-spacing: 0.5px;
+}
+
+/* Card styling */
+.ant-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  background: #ffffff;
+  color: #333333;
+}
+
+.ant-card-head {
+  border-bottom: 1px solid #e0e0e0;
+  background: #f5f5f5;
+  border-radius: 12px 12px 0 0;
+}
+
+.ant-card-head-title {
+  font-weight: 600;
+  color: #000000;
+}
+
+/* List items */
+.ant-list-item {
+  transition: all 0.3s ease;
+}
+
+.ant-list-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+.ant-btn-primary {
+  background: #000000;
+  border: 1px solid #000000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.ant-btn-primary:hover {
+  background: #333333;
+  border-color: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+/* Input styling */
+.ant-input-group-compact .ant-input {
+  border-radius: 8px 0 0 8px;
+}
+
+.ant-input-group-compact .ant-btn {
+  border-radius: 0 8px 8px 0;
+}
+
+.ant-input {
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  color: #333333;
+}
+
+.ant-input:focus,
+.ant-input-focused {
+  border-color: #000000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+.header-title {
+  color: #ffffff !important;
+  font-family: 'Courier New', 'Courier', 'Monaco', 'Consolas', monospace !important;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* Menu items styling */
+.ant-menu-horizontal {
+  justify-content: flex-start;
+}
+
+.ant-menu-horizontal > .ant-menu-item {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 0;
+  }
+  
+  .app-content {
+    padding: 16px;
+  }
+  
+  .welcome-content {
+    padding: 20px 16px;
+  }
+  
+  .content-container {
+    max-width: 100%;
+  }
+
+  /* Mobile header adjustments */
+  .header-title {
+    font-size: 16px !important;
+  }
+  
+  .ant-menu-horizontal > .ant-menu-item {
+    font-size: 12px;
+    padding: 0 8px;
+  }
+}
+
+/* Loading animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ant-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+
+/* Wallet Connection Styles */
+.wallet-button {
+  background: #000000;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.wallet-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: #333333;
+  border-color: #333333;
+  color: #ffffff;
+}
+
+.wallet-button.connected {
+  background: #ffffff;
+  border-color: #000000;
+  color: #000000;
+}
+
+.wallet-button.connected:hover {
+  background: #f0f0f0;
+  border-color: #000000;
+  color: #000000;
+}
+
+.wallet-modal .ant-modal-content {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.wallet-modal .ant-modal-header {
+  background: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.wallet-modal .ant-modal-title {
+  color: #000000;
+  font-weight: 700;
+}
+
+.wallet-modal .ant-modal-close {
+  color: #000000;
+}
+
+.wallet-modal .ant-modal-close:hover {
+  color: #666666;
+}
+
+/* Wallet Dropdown Styles */
+.ant-dropdown-menu {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  border: 1px solid #e8e8e8 !important;
+  background: #ffffff !important;
+}
+
+.ant-dropdown-menu-item {
+  padding: 8px 16px !important;
+  border-radius: 4px !important;
+  margin: 4px !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-dropdown-menu-item:hover {
+  background: #f5f5f5 !important;
+}
+
+.ant-dropdown-menu-item-danger {
+  color: #ff4d4f !important;
+}
+
+.ant-dropdown-menu-item-danger:hover {
+  background: #fff2f0 !important;
+  color: #ff7875 !important;
+}
+
+.ant-dropdown-menu-item-disabled {
+  cursor: default !important;
+}
+
+.ant-dropdown-menu-item-disabled:hover {
+  background: transparent !important;
+}
+
+.ant-dropdown-menu-item-divider {
+  margin: 8px 0 !important;
+  background: #f0f0f0 !important;
+} 

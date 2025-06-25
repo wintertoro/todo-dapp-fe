@@ -1,0 +1,67 @@
+{
+  "name": "aptos-todo-list",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A decentralized todo list application built on Aptos blockchain",
+  "keywords": [
+    "aptos",
+    "blockchain",
+    "todo",
+    "dapp",
+    "web3"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext ts,tsx --fix",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "contract:compile": "cd contract && aptos move compile",
+    "contract:test": "cd contract && aptos move test --dev",
+    "contract:publish": "cd contract && aptos move publish",
+    "contract:clean": "cd contract && rm -rf build/",
+    "clean": "rm -rf dist/ node_modules/.vite/",
+    "analyze": "npx vite-bundle-analyzer dist/stats.html"
+  },
+  "dependencies": {
+    "@aptos-labs/ts-sdk": "^1.28.0",
+    "@aptos-labs/wallet-adapter-ant-design": "^2.4.0",
+    "@aptos-labs/wallet-adapter-react": "^3.6.0",
+    "@types/react-router-dom": "^5.3.3",
+    "antd": "^5.16.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.6.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "typescript": "^5.4.0",
+    "vite": "^5.2.0",
+    "vite-bundle-analyzer": "^0.7.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
