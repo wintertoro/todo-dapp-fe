@@ -5,7 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   define: {
-    global: "globalThis",
+    global: 'globalThis',
+    'process.env': {},
   },
   resolve: {
     alias: {
@@ -17,12 +18,31 @@ export default defineConfig({
       https: 'https-browserify',
       os: 'os-browserify',
       url: 'url',
-      events: 'events'
+      events: 'events',
+      util: 'util',
+      path: 'path-browserify',
+      process: 'process/browser',
     },
   },
   server: {
     port: 3000,
     host: true,
+  },
+  optimizeDeps: {
+    include: [
+      'buffer',
+      'process',
+      'crypto-browserify',
+      'stream-browserify', 
+      'events',
+      'util',
+      'assert',
+      'path-browserify',
+      'os-browserify',
+      'https-browserify',
+      'stream-http',
+      'url'
+    ],
   },
   build: {
     target: 'es2020',
@@ -68,7 +88,11 @@ export default defineConfig({
               id.includes('crypto-browserify') ||
               id.includes('stream-browserify') ||
               id.includes('buffer') ||
-              id.includes('events')) {
+              id.includes('events') ||
+              id.includes('util') ||
+              id.includes('assert') ||
+              id.includes('path-browserify') ||
+              id.includes('process')) {
             return 'crypto-vendor';
           }
           
