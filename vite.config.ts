@@ -7,6 +7,19 @@ export default defineConfig({
   define: {
     global: "globalThis",
   },
+  resolve: {
+    alias: {
+      stream: 'stream-browserify',
+      buffer: 'buffer',
+      crypto: 'crypto-browserify',
+      assert: 'assert',
+      http: 'stream-http',
+      https: 'https-browserify',
+      os: 'os-browserify',
+      url: 'url',
+      events: 'events'
+    },
+  },
   server: {
     port: 3000,
     host: true,
@@ -51,7 +64,11 @@ export default defineConfig({
               id.includes('secp256k1') ||
               id.includes('@noble/') ||
               id.includes('elliptic') ||
-              id.includes('bn.js')) {
+              id.includes('bn.js') ||
+              id.includes('crypto-browserify') ||
+              id.includes('stream-browserify') ||
+              id.includes('buffer') ||
+              id.includes('events')) {
             return 'crypto-vendor';
           }
           
