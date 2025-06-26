@@ -1,5 +1,5 @@
-import { Card, Typography, Divider, Space, List, Tag, BackTop } from 'antd';
-import { BookOutlined, CodeOutlined, ApiOutlined, SettingOutlined, BugOutlined } from '@ant-design/icons';
+import { Card, Typography, Divider, Space, List, Tag, BackTop, Button } from 'antd';
+import { BookOutlined, CodeOutlined, ApiOutlined, SettingOutlined, BugOutlined, GithubOutlined } from '@ant-design/icons';
 
 const { Title, Text, Paragraph, Link } = Typography;
 
@@ -15,6 +15,24 @@ const Documentation = () => {
           todo data on-chain using Move smart contracts, ensuring permanence, transparency, and true ownership
           of your data. No traditional databases or centralized servers required!
         </Paragraph>
+
+        <div style={{ marginBottom: 24, textAlign: 'center' }}>
+          <Button 
+            type="primary" 
+            size="large"
+            icon={<GithubOutlined />}
+            href="https://github.com/wintertoro/todo-dapp-fe"
+            target="_blank"
+            style={{ 
+              background: '#24292e', 
+              borderColor: '#24292e',
+              boxShadow: '0 4px 12px rgba(36, 41, 46, 0.15)',
+              fontWeight: 'bold'
+            }}
+          >
+            View Source Code on GitHub
+          </Button>
+        </div>
         
         <Card style={{ background: '#e6f7ff', border: '1px solid #91d5ff', marginBottom: 16 }}>
           <Title level={4} style={{ color: '#1890ff', margin: '0 0 8px 0' }}>

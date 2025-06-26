@@ -4,6 +4,7 @@ import { useWallet } from "@aptos-labs/wallet-adapter-react";
 import TodoList from './components/TodoList'
 import AddTodo from './components/AddTodo'
 import WalletHelper from './components/WalletHelper'
+import Footer from './components/Footer'
 import { AptosService, TodoItem } from './services/aptosService'
 import './App.css'
 
@@ -224,8 +225,8 @@ function App() {
   ), []);
 
   return (
-    <div className="app-content" style={{ padding: '24px' }}>
-      <div className="content-container" style={{ maxWidth: 1200, margin: '0 auto' }}>
+    <div className="app-content" style={{ padding: '24px', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <div className="content-container" style={{ maxWidth: 1200, margin: '0 auto', flex: 1 }}>
         <Space direction="horizontal" size="large" style={{ width: '100%', marginBottom: 16, justifyContent: 'space-between', alignItems: 'center', display: 'flex' }}>
           <WalletHelper />
         </Space>
@@ -244,6 +245,7 @@ function App() {
           </Space>
         )}
       </div>
+      <Footer />
     </div>
   )
 }
